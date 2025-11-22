@@ -10,7 +10,7 @@ Zu diesem Zweck wird Python der Pfad auf diese Datei bekannt gegeben, damit aus 
 
 Danach wird der absolute Pfad auf die Eingabedaten ermittelt und an die Hilfsfunktion übergeben. Das Ergebnis der Hilfsfunktion wird schließlich zur Namenssuche verwendet.
 
-### ../../utils.py (Zeilen 1 - 16)
+### ../../python/utils.py (Zeilen 1 - 16)
 
 Die Eingabedatei besteht aus mehreren Zeilen, von denen zwei Zeilen die Nutzdaten der Aufgabe enthalten:
 
