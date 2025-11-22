@@ -16,12 +16,6 @@ with open(filepath, 'r') as file:
             input_as_map[current_key] = line.strip().split(',')
             current_key += 1
 
-#
-# input_as_map enthält für 
-#   key == 0: Die Liste aller Namen
-#   key == 1: die Liste aller Commands
-# 
-
 name_len = len(input_as_map[NAME_KEY])
 
 current_name_pos = 1

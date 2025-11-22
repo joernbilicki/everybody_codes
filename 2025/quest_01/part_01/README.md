@@ -1,1 +1,23 @@
-See [Quest 1 / Part I](https://everybody.codes/event/2025/quests/1)
+# Lösung
+
+## Datenvorbereitung (Zeilen 1 - 17)
+
+Die Eingabedatei besteht aus mehreren Zeilen, von denen zwei Zeilen die Nutzdaten der Aufgabe enthalten:
+
+- Die erste Zeile mit Nutzdaten enthält eine komma-separierte Liste der zu durchsuchenden Namen.
+- Die zweite Zeile mit Nutzdaten enthält eine komma-separierte Liste der Kommandos zur Namenssuche.
+
+Die Datei wird zeilenweise gelesen. Jede Zeile mit Nutzdaten wird in eine Liste umgewandelt. Jede Liste wird in einer Map unter einem Integer-Schlüssel gespeichert.
+
+- Key == 0: Liste der zu durchsuchenden Namen.
+- Key == 1: Liste der Kommandos zur Namenssuche.
+
+Die Map dient lediglich dem vereinfachten Handling bei der Datenvorbereitung.
+
+## Namenssuche (Zeilen 19 - 32)
+
+Die Anzahl der Namen ergibt sich aus der Länge der Namensliste unter Key == 1. Ein aktueller Zeiger zeigt auf den logisch ersten Namen in der Liste.
+
+Für jedes Kommando in der Kommandoliste werden Suchrichtung und Suchlänge ermittelt. Je nach Suchrichtung wird der aktuelle Zeiger auf einen Namen in der Namensliste um die Suchlänge erhöht (maximal bis zur Länge der Namensliste) bzw. reduziert (minimal bis zur Position 1 in der Namensliste).
+
+Die technische Position in der Namensliste ergibt sich am Ende durch den um 1 reduzierten Zeiger.
