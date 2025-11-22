@@ -1,4 +1,6 @@
-# Born of Fire
+# The Song of Ducks and Dragons
+
+## Born of Fire
 
 The night is warm, and the moonlight lazily spills over the rooftops of a small village hidden deep within the mountains. The blacksmith is finishing his final task in the forge, eager for a hot meal after a long day battling iron and smoke.
 
