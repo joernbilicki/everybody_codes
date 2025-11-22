@@ -1,6 +1,16 @@
 # Lösung
 
-## Datenvorbereitung (Zeilen 1 - 17)
+## Datenvorbereitung
+
+### what_is_your_name.py (Zeilen 1 - 10)
+
+Das Einlesen und Aufbereiten der Eingebedaten ist an eine Utility-Funktion ausgelagert (utils.py).
+
+Zu diesem Zweck wird Python der Pfad auf diese Datei bekannt gegeben, damit aus diesem Pfad Pythondateien importiert werden können.
+
+Danach wird der absolute Pfad auf die Eingabedaten ermittelt und an die Hilfsfunktion übergeben. Das Ergebnis der Hilfsfunktion wird schließlich zur Namenssuche verwendet.
+
+### ../../utils.py (Zeilen 1 - 16)
 
 Die Eingabedatei besteht aus mehreren Zeilen, von denen zwei Zeilen die Nutzdaten der Aufgabe enthalten:
 
@@ -12,9 +22,9 @@ Die Datei wird zeilenweise gelesen. Jede Zeile mit Nutzdaten wird in eine Liste 
 - Key == 0: Liste der zu durchsuchenden Namen.
 - Key == 1: Liste der Kommandos zur Namenssuche.
 
-Die Map dient lediglich dem vereinfachten Handling bei der Datenvorbereitung.
+Die Map dient lediglich dem vereinfachten Handling bei der Datenvorbereitung sowie zur Rückgabe an das Hauptprogramm.
 
-## Namenssuche (Zeilen 19 - 32)
+## Namenssuche (Zeilen 12 - 25)
 
 Die Anzahl der Namen ergibt sich aus der Länge der Namensliste unter Key == 1. Ein aktueller Zeiger zeigt auf den logisch ersten Namen in der Liste.
 
