@@ -1,25 +1,36 @@
 from os import path
 import sys
 
+# Make the functionality of a custom file available to import
 workdir = path.abspath(path.dirname(__file__))
 sys.path.insert(1, path.join(workdir, "../../python"))
 import utils
 
+# Create the absolute path to the given data file
 fname = path.join(workdir, "../everybody_codes_e2025_q01_p1.txt")
 
+# Prepare a managable structure from the data file
 input_as_map = utils.prepare_data_from_file(fname)
 
-name_len = len(input_as_map[utils.NAME_KEY])
+def r_operation(current_name_pos, shift_count, name_len): 
+    """
+    Returns for the "right shift operation" the new position
+    in the name list.
+    """
+    return min(current_name_pos + shift_count, name_len)
 
-current_name_pos = 1
+def l_operation(current_name_pos, shift_count, name_len):
+    """
+    Returns for the "left shift operation" the new position
+    in the name list. (ignores the parameter name_len)
+    """
+    return max(current_name_pos - shift_count, 1)
 
-for command in input_as_map[utils.COMMAND_KEY]:
-    direction   = command[:1]
-    shift_count = int(command[1:])
-    match direction:
-        case "R":
-            current_name_pos = min(current_name_pos + shift_count, name_len)
-        case "L":
-            current_name_pos = max(current_name_pos - shift_count, 1)
+# Organize the operations in a map with the oparation's shortcut as key.
+operations_map = {
+    "R": r_operation,
+    "L": l_operation
+}
 
-print(input_as_map[utils.NAME_KEY][current_name_pos-1])
+# Prints the resulting name 
+print(utils.get_name(input_as_map, operations_map))
