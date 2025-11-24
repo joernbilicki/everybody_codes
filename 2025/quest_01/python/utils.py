@@ -31,6 +31,35 @@ def prepare_data_from_file(fname):
     return input_as_map
 
 
+def r_circle_operation(current_name_pos, shift_count, name_len, name_list): 
+    """
+    Returns for the "right shift operation" the new position
+    in the name list.
+    In case of an "overflow" it continues on the left hand side 
+    of the name list.
+    Ignores the parameter name_list.
+    """
+    new_name_pos = (current_name_pos + shift_count) % name_len
+    if new_name_pos == 0:
+        new_name_pos = name_len
+    return new_name_pos
+
+def l_circle_operation(current_name_pos, shift_count, name_len, name_list):
+    """
+    Returns for the "left shift operation" the new position
+    in the name list.
+    In case of an "overflow" it continues on the right hand side 
+    of the name list.
+    Ignores the parameter name_list.
+    """
+    if current_name_pos == shift_count:
+        new_name_pos = name_len
+    else:
+        new_name_pos = (current_name_pos - shift_count) % name_len
+    return new_name_pos
+
+
+
 def get_name(input_as_map, operations_map):
     """
     Returns from the input map the name according to the given operations in this map.
@@ -46,6 +75,6 @@ def get_name(input_as_map, operations_map):
     for command in input_as_map[COMMAND_KEY]:
         direction   = command[:1]
         shift_count = int(command[1:])
-        current_name_pos = operations_map[direction](current_name_pos, shift_count, name_len)
+        current_name_pos = operations_map[direction](current_name_pos, shift_count, name_len, input_as_map[NAME_KEY])
 
     return input_as_map[NAME_KEY][current_name_pos-1]
