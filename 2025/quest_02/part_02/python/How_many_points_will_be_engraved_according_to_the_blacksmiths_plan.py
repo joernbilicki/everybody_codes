@@ -13,8 +13,6 @@ def is_in_range(cn):
 
 cn_input = utils.prepare_data_from_file(fname)
 
-cn_input = [35300,-64910]
-
 offset = 1000
 cn_offset = [offset, offset]
 cn_bottom_right = utils.add(cn_input, cn_offset)
@@ -32,16 +30,21 @@ for y in range(grid_size):
 print(cn_grid)
 print(len(cn_grid))
 
+cn_div = [100000,100000]
+
 count_result = len(cn_grid)
 
-for cn in cn_grid:
+def do_cycles(cn):
     cn_result = cn
     for i in range(99):
         cn_result = utils.multiply(cn_result, cn_result)
-        cn_result = utils.divide(cn_result, [100000,100000])
+        cn_result = utils.divide(cn_result, cn_div)
         cn_result = utils.add(cn_result, cn)
         if not is_in_range(cn_result):
-            count_result -= 1
-            break
+            return 1
+    return 0
+
+for cn in cn_grid:
+    count_result -= do_cycles(cn)
 
 print(count_result)
