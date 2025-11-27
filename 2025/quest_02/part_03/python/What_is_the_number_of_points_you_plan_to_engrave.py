@@ -19,7 +19,7 @@ cn_bottom_right = utils.add(cn_input, cn_offset)
 
 cn_grid = []
 
-grid_size = 101
+grid_size = 1001
 distance = offset // (grid_size-1) # 10 according to the task
 
 for y in range(grid_size):
