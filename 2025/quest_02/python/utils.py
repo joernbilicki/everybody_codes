@@ -16,6 +16,13 @@ def divide (cn1, cn2):
             divide_without_rounding(cn1[1],cn2[1])]
 
 def divide_without_rounding(v1, v2):
+    """
+    Performing the devision, ignoring (not rounding!) any fractional components that might arise.
+    Assumes, that v2 > 0.
+    
+    :param v1: Enumerator of the division.
+    :param v2: Denominator of the division.
+    """
     result = v1 // v2
     if v1 < 0 and v1 % v2 > 0:
         return result + 1
