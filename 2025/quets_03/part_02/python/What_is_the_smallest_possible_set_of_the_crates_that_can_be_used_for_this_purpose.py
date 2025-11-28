@@ -9,7 +9,7 @@ import utils
 # Create the absolute path to the given data file
 fname = path.join(workdir, "../everybody_codes_e2025_q03_p2.txt")
 
-crate_sizes = utils.prepare_data_from_file(fname)
+crate_sizes = sorted(set(utils.prepare_data_from_file(fname)))
 
 set_size = 0
 
