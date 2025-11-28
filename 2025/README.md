@@ -11,3 +11,5 @@ To his astonishment, even after an hour in the flames, the egg remains almost co
 As the village slumbers, the shell suddenly begins to crack. From within emerges… a dragon? A duck? Or perhaps something caught between the two? The hatchling’s small, glistening scales are shaped like feathers, and its wings seem far too large for such a tiny creature.
 
 Do you think you are the blacksmith who discovered this strange egg? Oh no, no! You are the creature itself, newly born into the world. But who or what are you? Where have you come from? What destiny awaits you?
+
+See [The Song of Ducks and Dragons [ 2025 ]](https://everybody.codes/event/2025/quests)
