@@ -12,13 +12,6 @@ fname = path.join(workdir, "../everybody_codes_e2025_q04_p1.txt")
 
 gear_list = utils.prepare_data_from_file(fname)
 
-factor = 1.0
+gear_ratio = utils.get_gear_ratio(gear_list)
 
-first_gear = gear_list[0]
-
-for i in range(1, len(gear_list)):
-    second_gear = gear_list[i]
-    factor = factor * (first_gear / second_gear)
-    first_gear = second_gear
-
-print(floor(2025*factor))
+print(floor(2025*gear_ratio))
