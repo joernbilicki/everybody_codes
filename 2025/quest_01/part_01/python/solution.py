@@ -32,5 +32,5 @@ operations_map = {
     "L": l_operation
 }
 
-# Prints the resulting name 
+# Answer for: what is your name? 
 print(utils.get_name(input_as_map, operations_map))

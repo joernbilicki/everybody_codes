@@ -19,4 +19,5 @@ while len(crate_sizes) > 0:
     for crate in crate_set:
         crate_sizes.remove(crate)
 
+# Answer for: How many sets do you need for this?
 print(set_count)

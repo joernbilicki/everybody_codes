@@ -14,4 +14,5 @@ gear_list = utils.prepare_data_from_file(fname)
 
 gear_ratio = utils.get_gear_ratio(gear_list)
 
+# Answer for: How many full turns will the last gear make if the first one turns exactly 2025 times?
 print(floor(2025*gear_ratio))

@@ -16,4 +16,5 @@ gear_ratio = utils.get_gear_ratio(gear_list)
 
 minimum_turns = 10000000000000
 
+# Answer for: What is the minimum number of full turns for the first gear after which the last one turns at least 10000000000000 times?
 print(ceil((1/gear_ratio)*minimum_turns))

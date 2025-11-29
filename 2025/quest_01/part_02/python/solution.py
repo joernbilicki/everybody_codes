@@ -15,5 +15,5 @@ operations_map = {
     "L": utils.l_circle_operation
 }
 
-# Prints the resulting name 
+# Answer for: What is the name of your first parent?
 print(utils.get_name(input_as_map, operations_map))

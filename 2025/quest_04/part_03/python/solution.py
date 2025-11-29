@@ -23,4 +23,5 @@ for i in range(1, len(gear_list)):
     gear_ratio = gear_ratio * (first_gear / second_gear)
     first_gear = gear_list[i][1]
 
+# Answer for: How many full turns will the last gear make if the first one turns exactly 100 times?
 print(floor(100*gear_ratio))

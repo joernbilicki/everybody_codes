@@ -16,5 +16,6 @@ largest_set = 0
 for crate in crate_sizes:
     largest_set += crate
 
+# Answer for: What is the largest possible set of crates that can be formed from a given list?
 print(largest_set)
 

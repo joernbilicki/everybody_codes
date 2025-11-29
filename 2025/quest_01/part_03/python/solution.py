@@ -39,5 +39,5 @@ operations_map = {
     "L": l_operation
 }
 
-# Prints the resulting name 
+# Answer for: What is the name of your second parent?
 print(utils.get_name(input_as_map, operations_map))

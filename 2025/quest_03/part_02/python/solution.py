@@ -16,5 +16,6 @@ set_size = 0
 for i in range(20):
     set_size += crate_sizes[i]
 
+# Answer for: What is the smallest possible set of the crates that can be used for this purpose?
 print(set_size)
 

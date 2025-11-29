@@ -19,4 +19,6 @@ for i in range(3):
     cn_result = utils.add(cn_result, cn_input)
 
 result = "[" + ",".join(map(str, cn_result)) + "]"
+
+# Answer for: what number will you get at the end of the process?
 print(result)
