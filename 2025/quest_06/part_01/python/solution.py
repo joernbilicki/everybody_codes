@@ -13,5 +13,5 @@ training_plan = utils.prepare_data_from_file(fname)
 mentors = "A"
 novice_mentor_count = utils.get_count(training_plan, mentors)
 
-# What is the total number of possible novice-mentor pairs?
+# What is the total number of possible novice-mentor pairs in the sword fighting category?
 print(novice_mentor_count)
