@@ -33,15 +33,15 @@ def add_mentors_for_novice(novice_dict:dict, mentor_dict, category:str):
     novice_dict[category] += mentor_dict[category.capitalize()]
 
 
-def get_count(training_plan:str, mentors:str) -> int:
+def get_count(training_plan:str, novices:str) -> int:
     """
-    Calculates the count for all novices an its correspüonding mentors.
+    Calculates the count for all novices an its corresponding mentors.
 
     :param training_plan: String of novices and mentors.
-    :param mentors: String of all mentors to calculate with. The novice's string will automatically created from this string.
+    :param mentors: String of all novices to calculate with. The mentors's string will automatically created from this string.
     :return: Count of possible novice-mentor pairs.
     """
-    novices = mentors.lower()
+    mentors = novices.upper()
 
     mentor_dict = {}
     novice_dict = {}
