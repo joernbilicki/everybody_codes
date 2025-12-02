@@ -10,8 +10,8 @@ import utils
 fname = path.join(workdir, "../everybody_codes_e2025_q06_p2.txt")
 training_plan = utils.prepare_data_from_file(fname)
 
-mentors = "ABC"
-novice_mentor_count = utils.get_count(training_plan, mentors)
+novices = "abc"
+novice_mentor_count = utils.get_count(training_plan, novices)
 
 # What is the total number of possible novice-mentor pairs?
 print(novice_mentor_count)
