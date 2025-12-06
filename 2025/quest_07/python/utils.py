@@ -13,7 +13,7 @@ def prepare_names(data_dict:dict, line:str) -> None:
     :param line: Comma-separated list of names
     :type line: str
     """
-    data_dict[NAMES] = line.split(",")
+    data_dict[NAMES] = [x.rstrip() for x in line.split(",")]
 
 
 def prepare_rule(data_dict:dict, line:str) -> None:
@@ -26,7 +26,7 @@ def prepare_rule(data_dict:dict, line:str) -> None:
     :param line: Rule.
     :type line: str
     """
-    rule:str = [x.strip() for x in line.split(">")]
+    rule:str = [x.rstrip() for x in line.split(">")]
     if RULES in data_dict:
         data_dict[RULES][rule[0]] = rule[1].replace(",", "")
     else: 
@@ -76,3 +76,35 @@ def prepare_data_from_file(fname:str) -> dict:
     add_rules_for_leafletters(data_dict[RULES])
 
     return data_dict
+
+
+def check_name(name:str, rules:dict) -> bool:
+    """
+    Checks the given name accordiung to the given rules.
+    
+    :param name: Name to check.
+    :type name: str
+    :param rules: Rules to check the given name.
+    :type rules: dict
+    :return: True, if the name matches the rules, False otherwise.
+    :rtype: bool
+    """
+    name_found:bool = True
+    name_len:int = len(name)
+
+    if name[0] in rules:
+        # Enter the grammar and retrieve the next possible letters from that rule 
+        # that starts with the first letter of the given name
+        next_letters:str = rules[name[0]]
+        for i in range(1, name_len):
+            # if the next letter of the given name is in the letters of the current rule
+            if name[i] in next_letters:
+                # Fetch the the rule for this letter and retrieve the next possible letters 
+                # for this rule
+                next_letters = rules[name[i]]
+            else:
+                # The name doesn't match the grammar
+                name_found = False
+                break
+
+        return name_found
