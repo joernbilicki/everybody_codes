@@ -1,0 +1,25 @@
+Feraris,Paltharis,Pyrurath,Havkryth,Qyraendris,Harkael,Ilmareon,Rynaris,Feroth,Palthkryth,Jaroth,Rynaelor,Rynketh,Havaris,Ilmaroth,Havoth,Ilmararis,Qyraurath,Pyrkael,Palthkael,Havoryx,Havketh,Haraelor,Rynurath,Harketh,Rynendris,Zalketh,Pyrendris,Ferendris,Zalkael,Qyraoth,Palthketh,Qyraaelor,Zaleon,Ilmarurath,Qyrakael,Ferkryth,Feraelor,Jareon,Jarkael,Ilmaroryx,Haroth,Ilmaraelor,Jarendris,Rynkryth,Qyraaris,Ferkael,Palthaelor,Havendris,Pyrketh,Jarketh,Harurath,Zaloth,Pyroth,Zalurath,Hararis,Qyraketh,Harendris,Harkryth,Zaloryx,Haroryx,Palthoryx,Palthurath,Ryneon,Pyroryx,Pyrkryth,Ilmarendris,Ilmarketh,Ilmarkael,Palthendris,Rynoth,Palthoth,Havkael,Qyraeon,Zalendris,Rynoryx,Jaraelor,Jarkryth,Zalaris,Qyraoryx,Fereon,Rynkael,Haveon,Ferketh,Hareon,Pyreon,Ilmarkryth,Pyraris,Zalkryth,Havurath,Qyrakryth,Havaelor,Jararis,Ferurath,Zalaelor,Paltheon,Feroryx,Jarurath,Jaroryx,Pyraelor
+
+e > o,l,n,t,v
+l > m,o,t,a,k,e,u,v
+k > r,a,e
+I > l
+n > a,k,o,e,d,u
+y > v,t,x
+m > a
+o > n,r,t
+Z > a
+d > r
+h > a,k,o,e,u
+u > r
+r > e,i,y,a,k,o,u
+J > a
+i > s
+Q > y
+v > a,k,o,e,u
+P > y,a
+R > y
+a > r,e,t,v,a,k,o,u
+F > e
+H > a
+t > h
