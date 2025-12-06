@@ -1,0 +1,17 @@
+Kazloris,Quenselor,Quenjorath,Kazselor,Urselor,Quenloris,Urjorath,Kazjorath,Urloris
+
+u > b
+r > j,a,i,b
+e > n,l
+U > r
+z > l,j,s
+K > a
+j > o
+n > l,j,s
+a > t,b
+i > s
+t > h
+s > e
+o > r
+l > o
+Q > u
