@@ -78,7 +78,7 @@ def prepare_data_from_file(fname:str) -> dict:
     return data_dict
 
 
-def check_name(name:str, rules:dict) -> bool:
+def check_name(name:str, rules:dict) -> dict:
     """
     Checks the given name accordiung to the given rules.
     
@@ -86,10 +86,10 @@ def check_name(name:str, rules:dict) -> bool:
     :type name: str
     :param rules: Rules to check the given name.
     :type rules: dict
-    :return: True, if the name matches the rules, False otherwise.
-    :rtype: bool
+    :return: The last matching rule, if the name matches the rules, None otherwise.
+    :rtype: dict
     """
-    name_found:bool = True
+    last_rule:dict = None
     name_len:int = len(name)
 
     if name[0] in rules:
@@ -101,10 +101,11 @@ def check_name(name:str, rules:dict) -> bool:
             if name[i] in next_letters:
                 # Fetch the the rule for this letter and retrieve the next possible letters 
                 # for this rule
-                next_letters = rules[name[i]]
+                last_rule = rules[name[i]]
+                next_letters = last_rule
             else:
                 # The name doesn't match the grammar
-                name_found = False
+                last_rule = None
                 break
 
-        return name_found
+        return last_rule

@@ -14,10 +14,11 @@ input_as_dict:dict = utils.prepare_data_from_file(fname)
 
 result:str = "NOT_FOUND"
 
+names:list = input_as_dict[utils.NAMES]
 rules:dict = input_as_dict[utils.RULES]
 
-for name in input_as_dict[utils.NAMES]:
-    if utils.check_name(name, rules):
+for name in names:
+    if utils.check_name(name, rules) != None:
         result = name
         break
 

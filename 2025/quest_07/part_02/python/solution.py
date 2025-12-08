@@ -19,7 +19,7 @@ rules:dict = input_as_dict[utils.RULES]
 
 for i in range(len(names)):
     name = names[i]
-    if utils.check_name(name, rules):
+    if utils.check_name(name, rules) != None:
         result += (i + 1)
 
 # Find all the names that comply with the rules and calculate the sum of their indices.
