@@ -86,10 +86,10 @@ def check_name(name:str, rules:dict) -> dict:
     :type name: str
     :param rules: Rules to check the given name.
     :type rules: dict
-    :return: The last matching rule, if the name matches the rules, None otherwise.
+    :return: The right hand side of the last matching rule, if the name matches the rules, None otherwise.
     :rtype: dict
     """
-    last_rule:dict = None
+    last_rule_rhs:dict = None
     name_len:int = len(name)
 
     if name[0] in rules:
@@ -101,11 +101,11 @@ def check_name(name:str, rules:dict) -> dict:
             if name[i] in next_letters:
                 # Fetch the the rule for this letter and retrieve the next possible letters 
                 # for this rule
-                last_rule = rules[name[i]]
-                next_letters = last_rule
+                last_rule_rhs = rules[name[i]]
+                next_letters = last_rule_rhs
             else:
                 # The name doesn't match the grammar
-                last_rule = None
+                last_rule_rhs = None
                 break
 
-        return last_rule
+        return last_rule_rhs
